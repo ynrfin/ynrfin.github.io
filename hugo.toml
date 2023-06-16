@@ -1,0 +1,2 @@
+# Ignore build error for vimeo
+ignoreErrors = ["error-remote-getjson"]
