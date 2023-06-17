@@ -1,4 +1,5 @@
 +++
+draft = true
 author = "Hugo Authors"
 title = "Rich Content"
 date = "2019-03-10"
@@ -30,6 +31,6 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ---
 
-## Vimeo Simple Shortcode
-
-{{< vimeo_simple 48912912 >}}
+<!-- ## Vimeo Simple Shortcode -->
+<!---->
+<!-- {{< vimeo_simple 48912912 >}} -->

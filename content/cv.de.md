@@ -1,6 +1,6 @@
 ---
 title: "Lebenslauf"
-draft: false
+draft: true
 type: "cv"
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: "Embed Video Files"
 date: "2022-04-26T01:16:18+02:00"
-draft: false
 comments: false
 socialShare: true
 toc: false
+draft: true
 ---
 
 Use the [video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
