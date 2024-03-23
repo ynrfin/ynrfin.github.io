@@ -1,3 +1,9 @@
+---
+title: "Golang: Empty Object when Marshalling Struct Field"
+date: 2024-03-24T18:01:56+07:00
+description: "Output Empty Object `{}` rather than `{"field1":"", "field2":""}`"
+---
+
 # Initial Requirement
 Imagine You want to have this output:
 ```json
