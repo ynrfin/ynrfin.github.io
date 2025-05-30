@@ -1,0 +1,92 @@
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #fff0f5;
+    touch-action: none;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  #controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+
+  input[type="number"] {
+    width: 60px;
+    padding: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 6px 10px;
+    margin-left: 6px;
+    font-size: 1rem;
+  }
+</style>
+
+<div id="controls">
+  <label>Slices:</label>
+  <input type="number" id="sliceInput" value="8" min="1" />
+  <button onclick="drawCake()">Divide Cake</button>
+</div>
+
+<canvas id="cakeCanvas"></canvas>
+
+<script>
+  const canvas = document.getElementById('cakeCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth + 100;
+    canvas.height = window.innerHeight + 100;
+  }
+
+  function drawCake() {
+    const n = parseInt(document.getElementById('sliceInput').value);
+    resizeCanvas();
+
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+    const radius = Math.max(canvas.width, canvas.height);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.arc(cx, cy, 5, 0, 2 * Math.PI);
+    ctx.fill();
+
+    ctx.strokeStyle = 'brown';
+    ctx.lineWidth = 2;
+
+    for (let i = 0; i < n; i++) {
+      const angle = (2 * Math.PI / n) * i;
+      const x = cx + radius * Math.cos(angle);
+      const y = cy + radius * Math.sin(angle);
+
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+  }
+
+  drawCake();
+  window.addEventListener('resize', drawCake);
+</script>
+
+
