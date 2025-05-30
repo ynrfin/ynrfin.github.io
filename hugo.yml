@@ -1,3 +1,28 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL: https://ynrfin.com/
+languageCode: en-us
+title: ynrfin's blog
+theme: PaperMod
+description: Man on search of Fun Things
+
+params:
+  dateFormat: "2006-01-02 "
+  defaultTheme: auto
+  homeInfoParams:
+    Title: Hello There!!
+    Content: Man on search of Fun Things
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/ynrfin"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/yanuar-arifin-866870193/"
+    - name: "email"
+      url: "mailto:contact@ynrfin.com"
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+
+# PaperMod config for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
