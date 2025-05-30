@@ -1,0 +1,39 @@
+/public/
+/resources/_gen/
+
+hugo.exe
+hugo.linux
+hugo.darwin
+
+# Hugo output folder
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+
+# Files for local development
+.DS_Store
+Thumbs.db
+
+# Node dependencies (if using npm/yarn for assets)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+
+# VS Code settings (optional)
+.vscode/
+
+# OS-specific
+ehthumbs.db
+Desktop.ini
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Hugo environment settings
+hugo_stats.json
+
